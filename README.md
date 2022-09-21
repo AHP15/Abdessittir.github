@@ -9,6 +9,8 @@ Right now I only created the first two sections of it (the toolbar, and the head
 * Webhint/Stylelint
 
 ## Getting Started
+
+This is the setup and the first part of the project which includes the toolbar and the headline.
 To get a local copy up and running follow these simple example steps.
 
 ## Prerequisites
