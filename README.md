@@ -112,4 +112,4 @@ Thanks to Microverse for making this happen.
 
 ## 📝 License
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/Abdessittir/portfolio-project/blob/setup-and-mobile-first/LICENSE) licensed.
