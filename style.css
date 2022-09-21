@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@media all and (min-width: 350px) {
+  * {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .main {
+    background-color: #fff;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header > h2,
+  .header > button {
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+
+  .header > button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+  }
+
+  .menu-icon {
+    width: 24px;
+  }
+
+  .head-line {
+    min-height: 100vh;
+    background-image: url("./media/header-illsutration-mobile@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head-line > h1 {
+    color: #172b4d;
+    font-size: 40px;
+  }
+
+  .head-line > h1 span {
+    color: #36b37e;
+    display: block;
+  }
+
+  .head-line > h1,
+  .head-line > p {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .head-line > p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .links {
+    margin-top: 30px;
+  }
+
+  .links > ul {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  .links > ul > li {
+    list-style: none;
+    margin: 10px;
+  }
+}
