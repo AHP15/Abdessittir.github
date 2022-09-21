@@ -1,6 +1,6 @@
 # portfolio-project
 
-This is a portfolio website to showcase my skills, my experience, and what type of projects I've worked on.
+This is a portfolio website to showcase [my](https://github.com/Abdessittir) skills, experience, and what type of projects I've worked on.
 Right now I only created the first two sections of it (the toolbar, and the headline section).
 
 ## Buit with
