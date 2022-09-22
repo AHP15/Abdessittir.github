@@ -19,18 +19,24 @@
   }
 
   .header > h2,
-  .header > button {
+  .header > nav button,
+  .head-line > button {
     padding: 10px 12px;
     cursor: pointer;
   }
 
-  .header > button {
+  .header > nav button,
+  .head-line > button {
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none;
-    border: none;
+    border:none;
+  }
+
+  .head-line > button {
+    margin-top: 50px;
   }
 
   .menu-icon {
@@ -43,7 +49,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 40px 25px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +77,7 @@
   }
 
   .links {
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   .links > ul {
@@ -83,5 +89,82 @@
   .links > ul > li {
     list-style: none;
     margin: 10px;
+  }
+
+  .work {
+    padding: 64px 24px;
+  }
+
+  .work-title{
+    font-size: 40px;
+    color: #172b4d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .work-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 474px);
+    row-gap: 15px;
+  }
+
+  .work-item {
+    background-image: url("./media/plaholder.png");
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid lightgray;
+  }
+
+  .work-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #fff;
+    padding: 16px;
+    height:45%;
+    color: #3a4a42;
+  }
+
+  .work-text > h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .work-text > ul {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border: 1px solid red;
+  }
+
+  .work-text > ul > li {
+    padding: 8px 12px;
+    list-style: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid red;
+  }
+
+  .work-text > button {
+    background-color: #36b37f;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }
