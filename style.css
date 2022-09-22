@@ -18,25 +18,25 @@
     padding: 10px;
   }
 
-  .header > h2,
-  .header > nav button,
   .head-line > button {
+    margin-top: 50px;
+  }
+
+  .header > h2 {
     padding: 10px 12px;
     cursor: pointer;
   }
 
-  .header > nav button,
-  .head-line > button {
+  .head-line > button,
+  .header > nav button {
+    padding: 10px 12px;
+    cursor: pointer;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none;
-    border:none;
-  }
-
-  .head-line > button {
-    margin-top: 50px;
+    border: none;
   }
 
   .menu-icon {
@@ -71,7 +71,7 @@
     margin-top: 30px;
   }
 
-  .head-line > p {
+  .description {
     font-size: 20px;
     font-weight: 400;
   }
@@ -86,6 +86,15 @@
     padding-left: 5px;
   }
 
+  .ul-items > li {
+    padding: 8px 12px;
+    list-style: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ebf0ee;
+  }
+
   .links > ul > li {
     list-style: none;
     margin: 10px;
@@ -95,8 +104,9 @@
     padding: 64px 24px;
   }
 
-  .work-title{
+  .title {
     font-size: 40px;
+    font-weight: 700;
     color: #172b4d;
     display: flex;
     flex-direction: column;
@@ -105,7 +115,7 @@
     margin-bottom: 20px;
   }
 
-  .work-container{
+  .work-container {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, 474px);
@@ -114,6 +124,7 @@
 
   .work-item {
     background-image: url("./media/plaholder.png");
+    background-repeat: no-repeat;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -125,10 +136,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     background-color: #fff;
     padding: 16px;
-    height:45%;
+    height: 50%;
     color: #3a4a42;
   }
 
@@ -137,23 +148,17 @@
     text-align: center;
   }
 
-  .work-text > ul {
+  .ul-items {
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    border: 1px solid red;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-left: 15px;
+    margin-top: 10px;
   }
 
-  .work-text > ul > li {
-    padding: 8px 12px;
-    list-style: none;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid red;
-  }
-
-  .work-text > button {
+  .btn {
     background-color: #36b37f;
     padding: 12px;
     border-radius: 4px;
@@ -166,5 +171,60 @@
     border: none;
     outline: none;
     cursor: pointer;
+  }
+
+  .about {
+    background-image: url("./media/about-me-\ mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 64px 24px;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    color: #42526e;
+    text-align: center;
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 352px);
+    row-gap: 15px;
+  }
+
+  .about-item {
+    background-image: url(./media/plaholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .about-item > img {
+    height: 40%;
+    object-fit: contain;
+  }
+
+  .about-item-text > h4 {
+    color: #344563;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .about-item-text > ul {
+    display: flex;
+  }
+
+  .about-item-text .ul-items li {
+    background-color: #fff;
   }
 }
