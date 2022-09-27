@@ -296,4 +296,8 @@
   .email {
     color: #42526e;
   }
+
+  .line {
+    margin-top: 100px;
+  }
 }
