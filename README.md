@@ -99,6 +99,10 @@ npx stylelint "**/*.{css,scss}"
 * Twitter: [@AbdessittirHar1](https://twitter.com/AbdessittirHar1)
 * LinkedIn: [Abdessittir Harkati](https://www.linkedin.com/in/abdessittir-harkati-a61b7324a/)
 
+- GitHub: [@jossi30](https://github.com/jossi30)
+- Twitter: [@jossi30_](https://twitter.com/jossi30_)
+- LinkedIn: [Yosief G. Hailay](https://linkedin.com/in/YosiefG.Hailay)
+
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
