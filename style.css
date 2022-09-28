@@ -97,6 +97,7 @@
     font-size: 12px;
     font-weight: 600;
     background: #ebf0ee;
+    padding-right: 15px;
   }
 
   .links > ul > li {
@@ -144,7 +145,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: #fff;
-    padding: 16px;
+    padding: 16px 0;
     height: 50%;
     color: #3a4a42;
   }
@@ -160,8 +161,9 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
-    padding-right: 15px;
+    width: 100%;
     margin-top: 10px;
+    margin-left: -20px;
   }
 
   .btn {
@@ -230,8 +232,8 @@
 
   .about-item-text {
     display: flex;
-    padding-right: 30px;
     height: 60%;
+    padding-left: 0;
   }
 
   .about-category .ul-items li {
