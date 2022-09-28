@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-@media all and (min-width: 350px) {
+@media screen and (min-width: 250px) {
   * {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -80,6 +80,10 @@
     margin-top: 15px;
   }
 
+  .header .links {
+    display: none;
+  }
+
   .links > ul {
     display: flex;
     align-items: center;
@@ -102,6 +106,7 @@
 
   .work {
     padding: 64px 24px;
+    margin-top: 30px;
   }
 
   .title {
@@ -220,11 +225,13 @@
     font-size: 24px;
     line-height: 32px;
     list-style: none;
+    width: 100%;
   }
 
   .about-item-text {
     display: flex;
     padding-right: 30px;
+    height: 60%;
   }
 
   .about-category .ul-items li {
@@ -299,5 +306,99 @@
 
   .line {
     margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header .links {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header .links a {
+    color: #172b4d;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+
+  .head-line > button {
+    border: 1px solid #dfe1e6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  .header > h2,
+  .header > nav button {
+    display: none;
+  }
+
+  .head-line {
+    padding: 160px 0;
+    background-image: url(./media/Header-llustration-desktop@2x.png);
+  }
+
+  .description {
+    width: 920px;
+  }
+
+  .work-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 474px);
+    column-gap: 15px;
+  }
+
+  .about-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 352px;
+    column-gap: 15px;
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-image: url(./media/frame.png), url(./media/Frame@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left, right;
+  }
+
+  .footer > h5 {
+    font-size: 30px;
+    flex: 1;
+  }
+
+  .contact-form {
+    flex: 1.5;
+  }
+
+  .footer .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .line,
+  .email {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .work,
+  .about,
+  .footer {
+    padding: 80px 120px;
+  }
+
+  .about {
+    background-image: url("./media/illustration\ about\ me\ desktop.png");
   }
 }
