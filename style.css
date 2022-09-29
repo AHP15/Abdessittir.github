@@ -104,6 +104,28 @@
     margin: 10px;
   }
 
+  .links > ul > li a {
+    transition: all 0.1s;
+  }
+
+  .links > ul > li a:hover {
+    color: #36b37f;
+  }
+
+  .arrow {
+    animation: arrow-anim 0.5s infinite alternate;
+  }
+
+  @keyframes arrow-anim {
+    0% {
+      transform: translateY(20px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   .work {
     padding: 64px 24px;
     margin-top: 30px;
@@ -180,6 +202,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: opacity 0.2s;
   }
 
   .about {
@@ -311,6 +334,42 @@
 
   .line {
     margin-top: 100px;
+  }
+
+  .trans-a {
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .trans-a:hover {
+    transform: scale(1.2);
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  .form-text {
+    transition: transform 0.3s;
+  }
+
+  .form-text:hover {
+    transform: translateX(10px);
+  }
+
+  .animate-a {
+    display: block;
+    animation: first-animation 0.5s infinite alternate;
+  }
+
+  @keyframes first-animation {
+    0% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 }
 
