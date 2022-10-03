@@ -1,7 +1,8 @@
-# portfolio-project
+# My portfolio
 
 This is a portfolio website to showcase [my](https://github.com/Abdessittir) skills, experience, and what type of projects I've worked on.
 Right now I only created the mobile version  of it.
+You can see it [live here](https://abdessittir.github.io/)
 
 ## Buit with
 
