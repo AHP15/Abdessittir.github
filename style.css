@@ -326,6 +326,11 @@
     height: 48px;
     color: #fff;
     cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .contact-btn:hover {
+    opacity: 0.8;
   }
 
   .email {
