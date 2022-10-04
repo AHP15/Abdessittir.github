@@ -326,7 +326,7 @@
     height: 48px;
     color: #fff;
     cursor: pointer;
-    transition:  color 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .contact-btn:hover {
