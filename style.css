@@ -326,6 +326,13 @@
     height: 48px;
     color: #fff;
     cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .contact-btn:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: blue;
   }
 
   .email {
@@ -347,6 +354,7 @@
 
   .btn:hover {
     opacity: 0.8;
+    background-color: chartreuse;
   }
 
   .form-text {
