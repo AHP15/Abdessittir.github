@@ -41,6 +41,7 @@
 
   .menu-icon {
     width: 24px;
+    z-index: 100;
   }
 
   .head-line {
@@ -85,13 +86,29 @@
   }
 
   .header .links_active {
-    display: flex;
-    position:absolute;
+    display: block;
+    position: fixed;
     width: 100%;
-    height: fit-content;
-    top: 0;
+    height: 100vh;
     left: 0;
-    border: 1px solid red;
+    top: 0;
+    background-color: white;
+  }
+
+  .header .links_active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .links_active ul a {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    text-decoration: none;
+    color: #3a4a42;
   }
 
   .links > ul {
