@@ -84,6 +84,16 @@
     display: none;
   }
 
+  .header .links_active {
+    display: flex;
+    position:absolute;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+  }
+
   .links > ul {
     display: flex;
     align-items: center;
