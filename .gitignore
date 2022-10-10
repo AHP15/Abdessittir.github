@@ -1,7 +1,7 @@
-
 node_modules/
+.idea
 .hintrc
 .stylelintrc.json
-
+.eslintrc.json
 package-lock.json
 package.json

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer type="module"></script>
     <title>Abdessittir Harkati</title>
 </head>
 <body>
@@ -14,13 +15,13 @@
             <nav>
                 <div class="links">
                     <ul>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="menu-link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="menu-link" href="#about">About</a></li>
+                        <li><a class="menu-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <button type="button">
-                    <img class="menu-icon" src="./media/Union.png" alt="menu" />
+                <button id="menu-btn" type="button">
+                    <img id="menu" class="menu-icon" src="./media/Union.png" alt="menu" />
                 </button>
             </nav>
         </header>
@@ -69,7 +70,7 @@
             </button>
         </section>
 
-        <section class="work">
+        <section id="portfolio" class="work">
             <h2 class="work-title title">
                 My Recent Works
                 <span>
@@ -158,7 +159,7 @@
             </article>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
 
             <div class="about-text">
                 <h2 class="title">About me</h2>
@@ -219,7 +220,7 @@
         </section>
 
 
-        <footer class="footer">
+        <footer id="contact" class="footer">
             <h5 class="form-text">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h5>
 
             <form class="contact-form" action="https://formspree.io/f/mpzndnoo" method="post">
