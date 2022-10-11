@@ -98,6 +98,57 @@ npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standa
 npx stylelint "**/*.{css,scss}"
 ``` 
 
+4. Fix validation errors
+
+### Eslint
+
+1. Run 
+```bash
+npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+``` 
+
+2. create a file in the root directory of your project named ```.eslintrc.json``` and copy the following to it
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "eol-last": "off",
+    "import/extensions": [
+      1,
+      {
+        "js": "always",
+        "json": "always"
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "dist/",
+    "build/"
+  ]
+}
+```
+
+3. Run 
+```bash
+npx eslint .
+```
+4. Fix validation errors
+
 ## Author
 
 * GitHub: [@Abdessittir](https://github.com/Abdessittir)
