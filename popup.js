@@ -132,7 +132,8 @@ window.onload = function loadContent() {
   });
 
   close.addEventListener('click', () => {
+    const detailInfo = document.querySelector('.project-info');
     detail.classList.toggle('show');
-    detail.removeChild(detail.lastChild);
+    detailInfo.remove();
   });
 };
