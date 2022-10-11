@@ -197,7 +197,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .show {
@@ -218,10 +218,14 @@
     background-color: white;
     border-radius: 10px;
     padding: 1rem;
-    height: calc(100vh - 2rem);
+    height: calc(100% - 30px);
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .project-info::-webkit-scrollbar {
+    display: none;
   }
 
   .project-info > h1 {
@@ -256,7 +260,7 @@
 
   .project_preview_img {
     width: 100%;
-    height: 350px;
+    height: 250px;
   }
 
   .work-item {
@@ -379,6 +383,15 @@
 
   .about-item-text .ul-items li {
     background-color: #fff;
+  }
+
+  #tech {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  #tech li {
+    font-size: 10px;
   }
 
   .footer {
@@ -582,5 +595,20 @@
 
   .about {
     background-image: url("./media/illustration\ about\ me\ desktop.png");
+  }
+
+  .show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-info {
+    width: calc(80% - 30px);
+    height: calc(100% - 30px);
+  }
+
+  .project_preview_img {
+    height: 616px;
   }
 }
