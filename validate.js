@@ -2,9 +2,9 @@
 const form = document.querySelector('.contact-form');
 const errorField = document.querySelector('.form-error');
 
-function showErrorMessage(errorMessage) {
+function showErrorMessage(errorText) {
   errorField.style.display = 'flex';
-  const errorEl = `<p>${errorMessage}</p>`
+  const errorEl = `<p>${errorText}</p>`
   errorField.insertAdjacentHTML('beforeend', errorEl);
 }
 
