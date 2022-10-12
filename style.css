@@ -453,6 +453,19 @@
     transition: color 0.2s ease;
   }
 
+  .form-error {
+    display: none;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #971414;
+    border: 1px solid #971414;
+    padding: 0.5rem;
+  }
+
   .contact-btn:hover {
     opacity: 0.8;
     color: white;
