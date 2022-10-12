@@ -12,7 +12,7 @@ const form = document.querySelector('.contact-form');
 const errorField = document.querySelector('.form-error');
 
 function showErrorMessage(errorText) {
-  const errorEl = `<p>${errorText}</p>`
+  const errorEl = `<p>${errorText}</p>`;
   errorField.insertAdjacentHTML('beforeend', errorEl);
   errorField.classList.add('show-error');
 }
@@ -23,21 +23,20 @@ function resetErrorField() {
 }
 
 function hasValue(text) {
-    return text.trim().length > 0;
+  return text.trim().length > 0;
 }
 
 function validateUsername(username) {
   const itHasValue = hasValue(username.value);
 
-  if(!itHasValue) {
+  if (!itHasValue) {
     showErrorMessage(EMPTY_USERNAME);
     return false;
   }
 
   const maxLength = username.value.length;
 
-  if(maxLength > 30) {
-    const error = '.'
+  if (maxLength > 30) {
     showErrorMessage(LONG_USERNAME);
     return false;
   }
@@ -48,13 +47,13 @@ function validateUsername(username) {
 function validateEmail(email) {
   const emailValue = email.value.trim();
   const itHasValue = hasValue(emailValue);
-  
-  if(!itHasValue) {
+
+  if (!itHasValue) {
     showErrorMessage(EMPTY_EMAIL);
     return false;
   }
 
-  const regexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const isLowerCase = /[A-Z]/;
 
   if (!regexp.test(emailValue)) {
@@ -72,14 +71,14 @@ function validateEmail(email) {
 
 function validateMessage(message) {
   const itHasValue = hasValue(message.value);
-  if(!itHasValue) {
+  if (!itHasValue) {
     showErrorMessage(EMPTY_MESSAGE);
     return false;
   }
 
   const maxLength = message.value.length;
 
-  if(maxLength > 500) {
+  if (maxLength > 500) {
     showErrorMessage(LONG_MESSAGE);
     return false;
   }
@@ -90,16 +89,13 @@ function validateMessage(message) {
 function handleSubmit(event) {
   event.preventDefault();
   resetErrorField();
-  const username = form.elements['username'];
-  const email = form.elements['email'];
-  const message = form.elements['message'];
-  
+  const [username, email, message] = form.elements;
 
   const isUsernameValid = validateUsername(username);
   const isEmailValid = validateEmail(email);
   const isMessageValid = validateMessage(message);
 
-  if(isUsernameValid && isEmailValid && isMessageValid) {
+  if (isUsernameValid && isEmailValid && isMessageValid) {
     event.target.submit();
   }
 }

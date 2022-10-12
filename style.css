@@ -466,6 +466,7 @@
     width: 100%;
     opacity: 0;
   }
+
   .show-error {
     opacity: 1;
   }

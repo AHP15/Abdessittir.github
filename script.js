@@ -41,8 +41,7 @@ window.addEventListener('resize', () => {
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', handleClick);
     });
-  }
-  else {
+  } else {
     menuLinks.forEach((menuLink) => {
       menuLink.removeEventListener('click', handleClick);
     });
