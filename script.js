@@ -30,10 +30,21 @@ function handleClick() {
 
 menuBtn.addEventListener('click', handleClick);
 
+if (window.innerWidth < 768) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener('click', handleClick);
+  });
+}
+
 window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener('click', handleClick);
+    });
+  }
+  else {
+    menuLinks.forEach((menuLink) => {
+      menuLink.removeEventListener('click', handleClick);
     });
   }
 });
