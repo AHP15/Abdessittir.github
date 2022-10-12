@@ -1,16 +1,25 @@
+const EMPTY_USERNAME = 'Username is required!';
+const LONG_USERNAME = 'Username must be less than 30 characters!';
+
+const EMPTY_EMAIL = 'Email is required!';
+const INVALID_EMAIL = 'Email is invalid';
+const UPPER_CASE_EMAIL = 'Email must be lowercase';
+
+const EMPTY_MESSAGE = 'Message is required!';
+const LONG_MESSAGE = 'Message must be less than 500 characters!';
 
 const form = document.querySelector('.contact-form');
 const errorField = document.querySelector('.form-error');
 
 function showErrorMessage(errorText) {
-  errorField.style.display = 'flex';
   const errorEl = `<p>${errorText}</p>`
   errorField.insertAdjacentHTML('beforeend', errorEl);
+  errorField.classList.add('show-error');
 }
 
 function resetErrorField() {
-  errorField.style.display = 'none';
-  errorField.textContent = '';
+  errorField.classList.remove('show-error');
+  errorField.replaceChildren('');
 }
 
 function hasValue(text) {
@@ -21,16 +30,15 @@ function validateUsername(username) {
   const itHasValue = hasValue(username.value);
 
   if(!itHasValue) {
-    const error = 'Username field is empty.'
-    showErrorMessage(error);
+    showErrorMessage(EMPTY_USERNAME);
     return false;
   }
 
   const maxLength = username.value.length;
 
   if(maxLength > 30) {
-    const error = 'Username must be less than 30 characters.'
-    showErrorMessage(error);
+    const error = '.'
+    showErrorMessage(LONG_USERNAME);
     return false;
   }
 
@@ -40,10 +48,9 @@ function validateUsername(username) {
 function validateEmail(email) {
   const emailValue = email.value.trim();
   const itHasValue = hasValue(emailValue);
-
+  
   if(!itHasValue) {
-    const error = 'Email field is empty.'
-    showErrorMessage(error);
+    showErrorMessage(EMPTY_EMAIL);
     return false;
   }
 
@@ -51,14 +58,12 @@ function validateEmail(email) {
   const isLowerCase = /[A-Z]/;
 
   if (!regexp.test(emailValue)) {
-    const error = 'Email is invalid.'
-    showErrorMessage(error);
+    showErrorMessage(INVALID_EMAIL);
     return false;
   }
 
   if (isLowerCase.test(emailValue)) {
-    const error = 'Email must be in lowercase letters.'
-    showErrorMessage(error);
+    showErrorMessage(UPPER_CASE_EMAIL);
     return false;
   }
 
@@ -68,16 +73,14 @@ function validateEmail(email) {
 function validateMessage(message) {
   const itHasValue = hasValue(message.value);
   if(!itHasValue) {
-    const error = 'Text message field is empty.'
-    showErrorMessage(error);
+    showErrorMessage(EMPTY_MESSAGE);
     return false;
   }
 
   const maxLength = message.value.length;
 
   if(maxLength > 500) {
-    const error = 'Text message must be less than 500 characters.'
-    showErrorMessage(error);
+    showErrorMessage(LONG_MESSAGE);
     return false;
   }
 
@@ -86,6 +89,7 @@ function validateMessage(message) {
 
 function handleSubmit(event) {
   event.preventDefault();
+  resetErrorField();
   const username = form.elements['username'];
   const email = form.elements['email'];
   const message = form.elements['message'];
@@ -95,8 +99,10 @@ function handleSubmit(event) {
   const isEmailValid = validateEmail(email);
   const isMessageValid = validateMessage(message);
 
-  //event.target.submit();
+  if(isUsernameValid && isEmailValid && isMessageValid) {
+    event.target.submit();
+  }
 }
-console.log(form);
+
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('input', resetErrorField);
