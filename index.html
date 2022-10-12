@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer type="module"></script>
     <script src="popup.js" type="module" async></script>
+    <script src="validate.js" type="module"></script>
     <title>Abdessittir Harkati</title>
 </head>
 <body>
@@ -156,14 +157,22 @@
             <form class="contact-form" action="https://formspree.io/f/mpzndnoo" method="post">
 
                 <label>
-                    <input type="text" name="username" placeholder="Full Name" maxlength="30" required/>
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder="Full Name"
+                    />
                 </label>
 
                 <label>
-                    <input type="email" name="email" placeholder="Email Address" required/>
+                    <input
+                       type="email"
+                       name="email"
+                       placeholder="Email Address"
+                    />
                 </label>
 
-                <textarea class="message" placeholder="Enter text heres" maxlength="500" name="message" required></textarea>
+                <textarea class="message" placeholder="Enter text heres" name="message"></textarea>
 
                 <button type="submit" class="contact-btn">Get In Touch</button>
             </form>
